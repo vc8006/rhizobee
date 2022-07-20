@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+const port = process.env.PORT || 3000
+
 const app = express()
 
 app.get("/", function (request, response){
@@ -31,6 +33,6 @@ app.get('/Floral_GLB', function (req, res) {
    });
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(port, function () {
    console.log('Listening on', server.address().port);
 });
